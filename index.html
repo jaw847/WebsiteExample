@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Adrian Watson Photography</title>
+    <style>
+        /* Reset default margin and padding */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* Header styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo img {
+            width: 150px; /* Adjust logo size */
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        nav ul li a:hover {
+            color: #ffcc00; /* Change color on hover */
+        }
+	.social-links {
+            display: flex;
+            align-items: center;
+        }
+        .social-links a {
+            margin-left: 10px;
+        }
+        .social-links img {
+            width: 30px;
+        }
+        /* Content area styles */
+        .main-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px;
+            width: 100%;
+            margin-top: 70px; /* Adjust margin to accommodate the fixed header */
+        }
+        .left-section,
+        .right-section {
+            padding: 20px;
+            text-align: left;
+            flex: 1;
+        }
+        .left-section img,
+        .right-section img {
+            width: 100%;
+            height: auto;
+        }
+        .right-section {
+            margin-left: 20px; /* Add some margin between the sections */
+        }
+        .right-section .welcome-text {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .right-section .paragraph-text {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+        /* Footer styles */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <script>
+        // Smooth scroll functionality for navigation links
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('nav ul li a');
+            links.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+
+                    const targetId = e.target.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+
+                    if (targetSection) {
+                        window.scrollTo({
+                            top: targetSection.offsetTop - 50, // Adjust offset if needed
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:/Users/user/OneDrive - University of Sussex/Dad Website/Website_logo.png" alt="Adrian Watson Photography">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#approach">My Approach</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+        </nav>
+        <div class="social-links">
+            <a href="https://en-gb.facebook.com/"><img src="C:/Users/user/OneDrive - University of Sussex/Dad Website/Facebook_logo.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/"><img src="C:/Users/user/OneDrive - University of Sussex/Dad Website/Instagram_logo.png" alt="Instagram"></a>
+            <a href="https://www.whatsapp.com/"><img src="C:/Users/user/OneDrive - University of Sussex/Dad Website/Whatsapp_logo.png" alt="WhatsApp"></a>
+            <a href="https://www.microsoft.com/en-gb/microsoft-365/outlook/email-and-calendar-software-microsoft-outlook"><img src="C:/Users/user/OneDrive - University of Sussex/Dad Website/Email_logo.png" alt="Email"></a>
+        </div>
+    </header>
+<div class="main-content">
+        <div class="left-section">
+            <img src="C:/Users/user/OneDrive - University of Sussex/Dad Website/Lauren_picture.jpg" alt="Photography Example Image">
+        </div>
+        <div class="right-section">
+            <div class="photography-name">Adrian Watson Photography</div>
+            <div class="photography-specialties">
+                For Weddings | For Families | For Evermore
+            </div>
+        </div>
+    </div>
+
+    <!-- Second image occupying the right third of the screen -->
+    <div class="main-content">
+        <div class="left-section">
+            <div class="left-section">
+            <div class="welcome-text">Welcome To My Website</div>
+            <div class="paragraph-text">
+                <p>
+                    I’m Adrian, a Worcestershire wedding photographer living in a village called Wichenford, just outside of Worcester. I pride myself in producing beautiful, engaging and natural images that tell a story, convey emotions and record the moments that matter most. And doing so with an approach that lets you get on with enjoying your day, knowing, I’ve got this! 
+                </p>
+                <p>
+                    I also have a huge amount of fun working with my couples and value the privilege of being able to experience just a bit of the magic and sparkle that surrounds their wedding. Take a look at My Approach page to find out more.
+                </p>
+                <p>
+                    Take a look at my About Me page to learn more about what I do when not eating burgers! If you have any questions about anything wedding photography related please reach out. It would be great to be able to say hello!
+                </p>
+            </div>
+        </div>
+        </div>
+        <div class="right-section">
+            <img src="C:/Users/user/OneDrive - University of Sussex/Dad Website/Ring_picture.jpg" alt="Photography Example Image 2">
+        </div>
+    </div>
+
+
+    <!-- Additional sections and content can be added as needed -->
+
+    
+</body>
+</html>
